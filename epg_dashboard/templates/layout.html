@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}EPG Summary{% endblock%}
+{% block content%}
+<h1>Total number of sources: {{ total }}</h1>
+<h1>Active EPG Sources: {{ done }}</h1>
+<h1>Hold EPG Sources: {{ hold }}</h1>
+<h2>List of Active sources</h2>
+
+<ul>
+{% for field in done_list %}
+	<li>{{ field[0] }}</li>
+{% endfor %}
+</ul>
+<h2>List of Hold sources</h3>
+<ul>
+{% for field in hold_list %}
+	<li>{{ field[0] }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

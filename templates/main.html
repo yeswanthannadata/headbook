@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	{% if current_user.is_authenticated %}
+	<h4>You are logged in</h4>
+	{% else %}
+	<!--<div class="text-center">
+	<a href="{{ url_for('login')}}">Login</a>
+	<a href="{{ url_for('register')}}">Register</a>
+	</div>-->
+	{% endif %}
+{% endblock %}
